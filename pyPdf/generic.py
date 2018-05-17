@@ -36,8 +36,8 @@ __author_email__ = "biziqe@mathieu.fenniak.net"
 
 import re
 from .utils import readNonWhitespace, RC4_encrypt
-import .filters as filters
-import .utils as utils
+import filters
+import utils
 import decimal
 import codecs
 
