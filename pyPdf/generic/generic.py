@@ -40,6 +40,7 @@ from ..filters import *
 from ..utils import *
 import decimal
 import codecs
+import six
 
 def readObject(stream, pdf):
     tok = stream.read(1)
@@ -367,7 +368,7 @@ class ByteStringObject(str, PdfObject):
 # If read from a PDF document, this string appeared to match the
 # PDFDocEncoding, or contained a UTF-16BE BOM mark to cause UTF-16 decoding to
 # occur.
-class TextStringObject(unicode, PdfObject):
+class TextStringObject(six.string_types, PdfObject):
     autodetect_pdfdocencoding = False
     autodetect_utf16 = False
 

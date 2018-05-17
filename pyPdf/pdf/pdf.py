@@ -42,6 +42,7 @@ __author_email__ = "biziqe@mathieu.fenniak.net"
 
 import math
 import struct
+import six
 from sys import version_info
 try:
     from cStringIO import StringIO
@@ -569,7 +570,7 @@ class PdfFileReader(object):
         if dest:
             if isinstance(dest, ArrayObject):
                 outline = self._buildDestination(title, dest)
-            elif isinstance(dest, unicode) and self._namedDests.has_key(dest):
+            elif isinstance(dest, six.string_types) and self._namedDests.has_key(dest):
                 outline = self._namedDests[dest]
                 outline[NameObject("/Title")] = title
             else:
