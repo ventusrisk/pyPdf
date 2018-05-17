@@ -50,11 +50,11 @@ except ImportError:
         from StringIO import StringIO
     except ImportError:
         from io import StringIO
-import .filters
-import .utils
+import .filters as filters
+import .utils as utils
 import warnings
 from .generic import *
-from utils import readNonWhitespace, readUntilWhitespace, ConvertFunctionsToVirtualList
+from .utils import readNonWhitespace, readUntilWhitespace, ConvertFunctionsToVirtualList
 
 if version_info < ( 2, 4 ):
    from sets import ImmutableSet as frozenset
