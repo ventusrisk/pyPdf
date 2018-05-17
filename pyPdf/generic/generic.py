@@ -368,7 +368,7 @@ class ByteStringObject(str, PdfObject):
 # If read from a PDF document, this string appeared to match the
 # PDFDocEncoding, or contained a UTF-16BE BOM mark to cause UTF-16 decoding to
 # occur.
-class TextStringObject(six.string_types, PdfObject):
+class TextStringObject(str, PdfObject):
     autodetect_pdfdocencoding = False
     autodetect_utf16 = False
 
