@@ -113,10 +113,3 @@ class PdfReadError(PyPdfError):
 
 class PageSizeNotDefinedError(PyPdfError):
     pass
-
-if __name__ == "__main__":
-    # test RC4
-    out = RC4_encrypt("Key", "Plaintext")
-    print repr(out)
-    pt = RC4_encrypt("Key", out)
-    print repr(pt)
