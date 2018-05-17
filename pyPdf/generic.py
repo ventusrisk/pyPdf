@@ -36,8 +36,8 @@ __author_email__ = "biziqe@mathieu.fenniak.net"
 
 import re
 from utils import readNonWhitespace, RC4_encrypt
-import filters
-import utils
+import .filters
+import .utils
 import decimal
 import codecs
 
@@ -687,7 +687,7 @@ class RectangleObject(ArrayObject):
 
     def getUpperLeft_x(self):
         return self.getLowerLeft_x()
-    
+
     def getUpperLeft_y(self):
         return self.getUpperRight_y()
 
@@ -797,4 +797,3 @@ for i in xrange(256):
         continue
     assert char not in _pdfDocEncoding_rev
     _pdfDocEncoding_rev[char] = i
-
