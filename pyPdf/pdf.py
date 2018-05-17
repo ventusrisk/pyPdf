@@ -50,8 +50,8 @@ except ImportError:
         from StringIO import StringIO
     except ImportError:
         from io import StringIO
-import .filters as filters
-import .utils as utils
+import filters
+import utils
 import warnings
 from .generic import *
 from .utils import readNonWhitespace, readUntilWhitespace, ConvertFunctionsToVirtualList
