@@ -74,13 +74,13 @@ class ConvertFunctionsToVirtualList(object):
 
     def __getitem__(self, index):
         if not isinstance(index, int):
-            raise TypeError, "sequence indices must be integers"
+            raise TypeError("sequence indices must be integers")
         len_self = len(self)
         if index < 0:
             # support negative indexes
             index = len_self + index
         if index < 0 or index >= len_self:
-            raise IndexError, "sequence index out of range"
+            raise IndexError("sequence index out of range")
         return self.getFunction(index)
 
 def RC4_encrypt(key, plaintext):
