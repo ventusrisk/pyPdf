@@ -252,7 +252,7 @@ class PdfFileWriter(object):
         # we sweep for indirect references.  This forces self-page-referencing
         # trees to reference the correct new object location, rather than
         # copying in a new copy of the page object.
-        for objIndex in xrange(len(self._objects)):
+        for objIndex in range(len(self._objects)):
             obj = self._objects[objIndex]
             if isinstance(obj, PageObject) and obj.indirectRef != None:
                 data = obj.indirectRef
